@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>WebSocket</title>
+</head>
+
+<body>
+  <p id="output"></p>
+
+  <script>
+    var uri = "ws://localhost:9090/api/v1/kafka-stream/6232fd7bb970c9d9fa62575c";
+
+    ws = new WebSocket(uri)
+
+    ws.onopen = function() {
+      console.log('Connected')
+    }
+
+    ws.onmessage = function(evt) {
+      console.log(evt.data)
+      var out = document.getElementById('output');
+      out.innerHTML += evt.data + '<br>';
+    }
+
+    setInterval(function() {
+      ws.send('new frame');
+    }, 1000);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{
+  "with_make": true,
+  "debug": true,
+  "server": {
+    "address": ":9090"
+  },
+  "context": {
+    "timeout": 1800
+  },
+  "database": {
+    "host": "ec2-52-221-244-108.ap-southeast-1.compute.amazonaws.com",
+    "port": "27017",
+    "user": "admin",
+    "pass": "password",
+    "name": "grab-hack-for-good"
+  },
+  "jwt": {
+    "secret_key": "iamsotiredmate"
+  },
+  "grab": {
+    "client_id": "06ba6e1aa1bb4cdb995f263cac860402",
+    "client_secret": "SSLnpUgZcENOJKhr",
+    "grant_type": "client_credentials",
+    "scope": "grab_express.partner_deliveries"
+  },
+  "pricing": {
+    "admin_fee_percentage": 3,
+    "pic_fee": 10000
+  },
+  "aws": {
+    "region": "ap-southeast-1",
+    "grab_create_delivery_queue_url": "https://sqs.ap-southeast-1.amazonaws.com/784317436895/soombangGrabOrderQueue",
+    "grab_endpoint_url": "grab-express-sandbox/v1/deliveries",
+    "backend_endpoint_url": "order/update-status"
+  }
+}
