@@ -7,7 +7,7 @@ export default boot(async ({ app }) => {
   // something to do
   app.use(VueGoogleMaps, { 
     load: {
-      key: 'AIzaSyAXeq6g3HL9uaX2X-kphWHhr-MghMf844A',
+      key: '',
       libraries: 'places'
     },
   })
